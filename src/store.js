@@ -17,4 +17,4 @@ export default function configureStore(initialState) {
     )(createStore)(rootReducer, initialState);
     
     return store;
-}
+} 

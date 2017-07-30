@@ -1,3 +1,0 @@
-export ContactPage from './contact';
-
-

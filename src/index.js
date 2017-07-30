@@ -1,19 +1,18 @@
-import React from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom';
-
-import {
-    BrowserRouter as Router,
-    Route,
-    Link
-} from 'react-router-dom'
-
-import { Provider } from 'react-redux';
-import { syncHistoryWithStore } from 'react-router-redux';
-import configureStore from './store';
-
-const store = configureStore();
-
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import todoApp from './reducers/index'
 import App from './app';
+import {addTodo}  from './actions/index';
+
+let store = createStore(todoApp);
+
+store.dispatch(addTodo('asdasdaw'));
+store.dispatch(addTodo('a123aw'));
+store.dispatch(addTodo('14412412asdaw'));
+console.log(store.getState());
+
 
 ReactDOM.render((
     <Provider store={ store }>

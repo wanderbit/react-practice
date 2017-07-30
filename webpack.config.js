@@ -57,7 +57,14 @@ module.exports = {
                     path.resolve(__dirname, 'src')
                 ],
                 plugins: ['transform-runtime']
-            },
+            }/*,
+            {
+                test: /\.less$/,
+                loader: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: 'css-loader'
+                })
+            }*/,
             {
                 test: /\.(png|jpg|svg|gif)$/,
                 loader: 'file?name=img/[path][name].[ext]'

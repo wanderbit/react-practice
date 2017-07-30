@@ -3,7 +3,7 @@ import { Header } from './components/index';
 import { DevTools } from './utils/index';
 
 export default class App extends React.Component {
-    
+
 
     render() {
         return (
@@ -13,5 +13,5 @@ export default class App extends React.Component {
             </div>
         );
     }
-
+ 
 }

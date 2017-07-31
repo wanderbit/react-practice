@@ -1,17 +1,22 @@
 import React from 'react';
-import { Header } from './components/index';
-import { DevTools } from './utils/index';
+import {
+    BrowserRouter as Router
+} from 'react-router-dom'
+
+import Header from './components/header';
+import Main from './main';
 
 export default class App extends React.Component {
 
-
     render() {
         return (
-            <div>
-                <Header />
-                { process.env.NODE_ENV !== 'production' ? <DevTools /> : null }
-            </div>
+            <Router>
+                <div>
+                   <Header/>
+                   <Main />
+                </div>
+            </Router>
         );
     }
- 
+
 }

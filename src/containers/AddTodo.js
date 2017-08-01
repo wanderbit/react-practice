@@ -3,21 +3,22 @@ import { connect } from 'react-redux';
 import { addTodo } from '../actions';
 
 let AddTodo = ({ state,dispatch }) => {
-    let input;
+
+    let inputtr;
     return (
         <div>
             <form onSubmit={e => {
         e.preventDefault();
-        if (!input.value.trim()) {
+        if (!inputtr.value.trim()) {
           return
         }
-        dispatch(addTodo(input.value));
+        dispatch(addTodo(inputtr.value));
         //console.log(state);
 
-        input.value = ''
+        inputtr.value = ''
       }}>
                 <input placeholder="введите строку" ref={node => {
-          input = node
+          inputtr = node
         }} />
                 <button type="submit">
                     Add Todo
@@ -28,7 +29,8 @@ let AddTodo = ({ state,dispatch }) => {
 };
 const mapStateToProps = (state) => {
     return {
-        state: state
+        state: state,
+        testprop: 'test'
     }
 };
 

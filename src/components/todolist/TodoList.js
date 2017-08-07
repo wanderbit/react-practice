@@ -8,7 +8,10 @@ export default class TodoList extends React.Component {
             <ol>
                 {this.props.todos.map(todo =>
 
-                   <li key={todo.id}>{todo.text}</li>
+                   <li key={todo.id}>{todo.text}
+                       <button className='btn' onClick={ this.deleteTodo.bind(this, item) }><i className='glyphicon glyphicon-remove' /></button>
+                       <button className={ btnClasses } onClick={ this.likeTodo.bind(this, item) }><i className='glyphicon glyphicon-heart' /></button>
+                   </li>
                 )}
             </ol>
         );

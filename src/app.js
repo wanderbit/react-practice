@@ -6,14 +6,18 @@ import {
 import Header from './components/header';
 import Main from './main';
 
+import  DevTools  from './utils/devtools';
+
 export default class App extends React.Component {
 
     render() {
         return (
+
             <Router>
                 <div>
                    <Header/>
                    <Main />
+                    <DevTools />
                 </div>
             </Router>
         );

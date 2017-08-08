@@ -7,16 +7,20 @@ export default class TodoList extends React.Component {
 
 
     deleteTodo(todo) {
+
         this.props.dispatch( deleteTodo(todo) );
+
     }
 
-    likeTodo(todo) {
-        this.props.dispatch( likeTodo(todo) );
+    likeTodo(id) {
+        console.log(id);
+        this.props.dispatch( likeTodo(id) );
     }
 
     render() {
         return (
             <ol>
+
                 {this.props.todos.map(todo =>
 
                    <li key={todo.id}>{todo.text}

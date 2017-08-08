@@ -6,18 +6,30 @@ const todos = (state = [], action) => {
         {
           id: action.id,
           text: action.text,
-          completed: false
+          completed: false,
+          liked: false
         }
-      ]
+      ];
+
     case 'TOGGLE_TODO':
       return state.map(todo =>
-        (todo.id === action.id) 
+        (todo.id === action.id)
           ? {...todo, completed: !todo.completed}
           : todo
-      )
+      );
+
+    case 'LIKE_TODO':
+      return state.map(todo =>
+          (todo.id === action.id)
+              ? {...todo, liked: !todo.liked}
+              : todo
+      );
+
+    case 'DELETE_TODO':
+
     default:
       return state
   }
-}
+};
 
 export default todos

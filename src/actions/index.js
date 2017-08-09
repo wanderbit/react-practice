@@ -15,17 +15,15 @@ export const toggleTodo = (id) => ({
   id
 })
 
-
-
 export function likeTodo(id) {
   return {
     type: 'LIKE_TODO',
     id
   };
-} 
-export function deleteTodo(todo) {
+}
+export function deleteTodo(id) {
   return {
     type: 'DELETE_TODO',
-    todo
+    id
   };
 }

@@ -9,21 +9,27 @@ const todos = (state = [], action) => {
           completed: false,
           liked: false
         }
-      ]
+      ];
 
     case 'TOGGLE_TODO':
       return state.map(todo =>
         (todo.id === action.id)
           ? {...todo, completed: !todo.completed}
           : todo
-      )
+      );
 
     case 'LIKE_TODO':
       return state.map(todo =>
           (todo.id === action.id)
               ? {...todo, liked: !todo.liked}
               : todo
-      )
+      );
+
+    case 'DELETE_TODO':
+      return Object.assign({}, state, {
+
+      });
+
 
     default:
       return state

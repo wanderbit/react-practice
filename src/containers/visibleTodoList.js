@@ -17,7 +17,6 @@ import TodoList from '../components/todolist/TodoList'
 
 const mapStateToProps = (state) => ({
     todos: state.todos,
-    test: 'testprop'
 })
 
 

@@ -22,7 +22,7 @@ export function likeTodo(id) {
   };
 }
 export function deleteTodo(id) {
-  return {
+  return { 
     type: 'DELETE_TODO',
     id
   };

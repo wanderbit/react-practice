@@ -26,9 +26,20 @@ const todos = (state = [], action) => {
       );
 
     case 'DELETE_TODO':
-      return Object.assign({}, state, {
+        console.log(state);
+      const filteredTodos = state.filter(function(element){
+        console.log(element.id,action.id);
+        if(element.id !== action.id){
+            return true;
 
+        }
       });
+      console.log(filteredTodos);
+
+     // return state;
+
+     /* todo => todo.id !== action.id*/
+    return Object.assign([], filteredTodos);
 
 
     default:

@@ -12,7 +12,7 @@ module.exports = {
     ],
     output: {
         publicPath: 'http://localhost:3000/',
-        path: __dirname + '/public',
+        path:  path.join(__dirname, "public"),
         filename: 'bundle.js'
     },
     watch: NODE_ENV == 'development',
@@ -32,7 +32,7 @@ module.exports = {
         modulesDirectories: ['node_modules', 'bower_components'],
         moduleTemplates: ['*', 'index'],
         extensions: ['', '.js'],
-        root: __dirname + '/src'
+        root:  path.join(__dirname, "src")
     },
     resolveLoader: {
         modulesDirectories: ['node_modules', 'bower_components'],
@@ -42,7 +42,7 @@ module.exports = {
     devServer: {
         host: 'localhost',
         port: 3000,
-        contentBase: __dirname + '/public',
+        contentBase:  path.join(__dirname, "public"),
         inline: true,
         hot: true,
         historyApiFallback: true
